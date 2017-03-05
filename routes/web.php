@@ -27,6 +27,26 @@ Route::group(['middleware'=>['web']], function() {
         'as' => 'signin'
     ]);
 
+    Route::get('/logout',[
+        'uses'=>'UserController@getLogout',
+        'as'=>'logout'
+    ]);
+
+    Route::get('/account', [
+        'uses'=>'UserController@getAccount',
+        'as'=>'account'
+    ]);
+
+    Route::post('/updateaccount',[
+        'uses'=>'UserController@postSaveAccount',
+        'as'=>'account.save'
+    ]);
+
+    Route::get('/userimage/{filename}', [
+        'uses' => 'UserController@getUserImage',
+        'as' => 'account.image'
+    ]);
+
     Route::get('/dashboard',[
         'uses' => 'PostController@getDashboard',
         'as' => 'dashboard',
@@ -43,6 +63,11 @@ Route::group(['middleware'=>['web']], function() {
         'uses'=>'PostController@getDeletePost',
         'as'=>'post.delete',
         'middleware'=>'auth'
+    ]);
+
+    Route::post('/edit', [
+        'uses'=>'PostController@postEditPost',
+        'as'=>'edit'
     ]);
 
 });
