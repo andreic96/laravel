@@ -6,11 +6,12 @@
         <a class="navbar-brand" href="#">Socialize</a>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!--<ul class="navbar-nav mr-auto">
+            <ul class="navbar-nav mr-auto mr-lg-0 ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="{{route('logout')}}">Logout <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+            </ul>
+            <!--    <li class="nav-item">
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="nav-item">
@@ -18,10 +19,7 @@
                 </li>
             </ul>
             -->
-            <form class="form-inline my-lg-0 ml-auto">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+
         </div>
     </nav>
 </header>
