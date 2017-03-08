@@ -34,7 +34,8 @@ Route::group(['middleware'=>['web']], function() {
 
     Route::get('/account', [
         'uses'=>'UserController@getAccount',
-        'as'=>'account'
+        'as'=>'account',
+        'middleware' => 'auth'
     ]);
 
     Route::post('/updateaccount',[
