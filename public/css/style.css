@@ -3,6 +3,10 @@ body{
     height:100%;*/
 }
 
+.container{
+    margin-top:25px;
+}
+
 #signup label{
     font-weight: bold;
 }
@@ -15,6 +19,7 @@ body{
 .new-post header,
 .posts header{
     margin-bottom:20px;
+    margin-top: 20px;
 }
 
 .posts .post{
